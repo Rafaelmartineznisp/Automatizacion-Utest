@@ -1,6 +1,7 @@
 package co.com.choucair.retotecnico.stepdefinitions;
 import co.com.choucair.retotecnico.model.TDatos;
 import co.com.choucair.retotecnico.questions.Verificar;
+import co.com.choucair.retotecnico.questions.VerificarRegistroFallido;
 import co.com.choucair.retotecnico.tasks.*;
 import cucumber.api.java.Before;
 import cucumber.api.java.es.Cuando;
@@ -51,5 +52,10 @@ public class StepDefinicionsRegistro {
     @Entonces("^verifica que el registro fue satisfactorio$")
     public void verificaQueElRegistroFueSatisfactorio(List<TDatos> tdatos)  {
        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Verificar.registro(tdatos.get(0))));
+    }
+
+    @Entonces("^verifica que la contrasenna es insegura$")
+    public void verificaQueLaContrasennaEsInsegura(List<TDatos> tdatos) {
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(VerificarRegistroFallido.registrofallido(tdatos.get(0))));
     }
 }

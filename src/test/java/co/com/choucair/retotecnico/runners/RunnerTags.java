@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions (features = "src/test/resources/features/registro_usuario_utest.feature",
-                   tags = "@Historia",
+                   tags = "@registroFallido",
                     glue = "co.com.choucair.retotecnico.stepdefinitions",
                     snippets = SnippetType.CAMELCASE)
 public class RunnerTags {

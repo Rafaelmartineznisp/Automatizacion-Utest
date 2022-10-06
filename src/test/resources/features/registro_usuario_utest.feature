@@ -4,10 +4,11 @@
 Característica: Validar resgitro Utest
   como usuario quiero resgistarme em la plataforma web Utest
 
+  Antecedentes:
+    Dado que el usuario ingresa a la pagina web utest
+
   @registro
   Esquema del escenario: Registro de usuario exitoso
-
-    Dado que el usuario ingresa a la pagina web utest
     Cuando  diligencia los datos principales del paso uno
       | nombre   | apellido   | correo   | mes   | dia   | anno   | idioma   |
       | <nombre> | <apellido> | <correo> | <mes> | <dia> | <anno> | <idioma> |
@@ -31,8 +32,6 @@ Característica: Validar resgitro Utest
 
   @registroFallido
   Esquema del escenario: Registro de usuario fallido
-
-    Dado que el usuario ingresa a la pagina web utest
     Cuando  diligencia los datos principales del paso uno
       | nombre   | apellido   | correo   | mes   | dia   | anno   | idioma   |
       | <nombre> | <apellido> | <correo> | <mes> | <dia> | <anno> | <idioma> |
